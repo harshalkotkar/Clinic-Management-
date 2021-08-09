@@ -1,124 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-            crossorigin="anonymous"
-        />
-        <style>
-            body {
-                background-image: url(Images/rbg.jpg);
-                object-fit: contain;
-                background-repeat: no-repeat;
-                color: white;
-                font-family: "Times New Roman", Times, serif;
-            }
-            .nav-link {
-                background: #2ace6c;
-                color: white;
-                margin-right: 10px;
-                border-radius: 50px;
-            }
-            * {
-                box-sizing: border-box;
-            }
-            .navbar {
-                background-color: white;
-            }
-            /* ----------------------------------------------------------appointment box */
-            /* Add padding to containers */
-            .container {
-                padding: 16px;
-                background-color: #1eaa56;
-                width: 37%;
-            }
 
-            /* Full-width input fields */
-            input[type="text"],
-            input[type="number"],
-            input[type="date"],
-            input[list="doctor"] {
-                width: 100%;
-                padding: 8px;
-                margin: 5px 0 22px 0;
-                display: inline-block;
-                border: none;
-                background: #f1f1f1;
-                border-radius: 15px;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(Images/rbg.jpg);
+            object-fit: contain;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+        }
 
-            input[type="text"]:focus,
-            input[type="number"]:focus,
-            input[type="date"]:focus,
-            input[list="doctor"]:focus {
-                background-color: #ddd;
-                outline: none;
-            }
+        .nav-link {
+            width: auto;
+            background: #2ace6c;
+            color: white;
+            margin-right: 10px;
+            border-radius: 50px;
+            list-style: none;
+            border: none;
+        }
 
-            /* Overwrite default styles of hr */
-            hr {
-                border: 1px solid #f1f1f1;
-                margin-bottom: 15px;
-            }
+        .modalbtn:hover {
+            cursor: pointer;
+        }
 
-            /* Set a style for the submit button */
-            .registerbtn {
-                background-color: #0a339d;
-                color: white;
-                padding: 8px 20px;
+        a img {
+            width: 70px;
+        }
 
-                border: none;
-                cursor: pointer;
-                width: 100%;
-                opacity: 0.9;
-                border-radius: 15px;
-            }
+        * {
+            box-sizing: border-box;
+        }
 
-            .registerbtn:hover {
-                opacity: 1;
-            }
-            h2 {
-                text-align: center;
-            }
-            /* footer and logo */
-            a {
-                text-decoration: none;
-                color: white;
-            }
-            .adminf {
-                margin-left: 150px;
-                border-right: black solid 1px;
-                padding-right: 7px;
-            }
-            .copy {
-                text-align: center;
-            }
-            footer {
-                background-color: #0a339d;
-                padding: 15px;
-            }
-            .photo {
-                width: 7%;
-                height: 7vh;
-                margin-right: 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm">
-            <!-- Brand/logo -->
-            <img class="photo" src="Images/logo.jpg" alt="" />
+        .navbar {
+            background-color: white;
+        }
 
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
+        /* ----------------------------------------------------------appointment box */
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+            background-color: #1eaa56;
+            width: 37%;
+        }
+
+        /* Full-width input fields */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[list="doctor"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 15px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[list="doctor"]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 15px;
+        }
+
+        /* Set a style for the submit button */
+        .registerbtn {
+            background-color: #0a339d;
+            color: white;
+            padding: 8px 20px;
+
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            border-radius: 15px;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* footer and logo */
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .adminf {
+            margin-left: 150px;
+            border-right: black solid 1px;
+            padding-right: 7px;
+        }
+
+        .copy {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #0a339d;
+            padding: 15px;
+        }
+
+        .photo {
+            width: 7%;
+            height: 7vh;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="./Images/Logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item ">
+                    <!-- Button trigger modal -->
+                    <a class="nav-link modalbtn" data-toggle="modal" data-target="#exampleModal">
+                        LOGIN
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Enter email">
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                                email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Password">
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="register.html">REGISTER</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="appointment.html">APPOINTMENT</a>
@@ -129,58 +197,51 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contactus.html">CONTACT US</a>
                 </li>
+
             </ul>
-        </nav>
-        <form action="/action_page.php">
-            <div class="container">
-                <h2>MAKE AN APPOINTMENT</h2>
-                <hr />
 
-                <label for="name"><b>FULL NAME</b></label>
-                <input
-                    type="text"
-                    placeholder="FULL NAME"
-                    name="name"
-                    id="name"
-                    required
-                />
+        </div>
+    </nav>
+    <form action="/action_page.php">
+        <div class="container">
+            <h2>MAKE AN APPOINTMENT</h2>
+            <hr />
 
-                <label for="number"><b>MOBILE NUMBER</b></label>
-                <input
-                    type="number"
-                    placeholder="MOBILE NUMBER"
-                    name="number"
-                    id="number"
-                    required
-                />
+            <label for="name"><b>FULL NAME</b></label>
+            <input type="text" placeholder="FULL NAME" name="name" id="name" required />
 
-                <label for="DATE"><b>DATE</b></label>
-                <input
-                    type="date"
-                    placeholder="DATE"
-                    name="DATE"
-                    id="DATE"
-                    required
-                />
+            <label for="number"><b>MOBILE NUMBER</b></label>
+            <input type="number" placeholder="MOBILE NUMBER" name="number" id="number" required />
 
-                <label style="font-weight: bold" for="Choose Doctor"
-                    >CHOOSE DOCTOR</label
-                >
-                <input list="doctor" name="doctor" id="Choose Doctor" />
-                <datalist id="doctor">
-                    <option value="DR.ARUN SHETTY(EYE SPECIALIST)"></option>
-                    <option value="DR. SUNITA WILLIAM(CARDIOLOGIST)"></option>
-                    <option value="DR. RAHUL SINGH()ENT SPECIALIST"></option>
-                    <option value="DR. ROSHNI(Dentist)"></option>
-                </datalist>
+            <label for="DATE"><b>DATE</b></label>
+            <input type="date" placeholder="DATE" name="DATE" id="DATE" required />
 
-                <hr />
+            <label style="font-weight: bold" for="Choose Doctor">CHOOSE DOCTOR</label>
+            <input list="doctor" name="doctor" id="Choose Doctor" />
+            <datalist id="doctor">
+                <option value="DR.ARUN SHETTY(EYE SPECIALIST)"></option>
+                <option value="DR. SUNITA WILLIAM(CARDIOLOGIST)"></option>
+                <option value="DR. RAHUL SINGH()ENT SPECIALIST"></option>
+                <option value="DR. ROSHNI(Dentist)"></option>
+            </datalist>
 
-                <button type="submit" class="registerbtn">SUBMIT</button>
-            </div>
-        </form>
-        <footer class="container-fluid text-center">
-            <a class="copy">© COPYRIGHT 2021 ALL RIGHTS RESERVED</a>
-        </footer>
-    </body>
+            <hr />
+
+            <button type="submit" class="registerbtn">SUBMIT</button>
+        </div>
+    </form>
+    <footer class="container-fluid text-center">
+        <a class="copy">© COPYRIGHT 2021 ALL RIGHTS RESERVED</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
